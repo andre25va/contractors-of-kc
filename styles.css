@@ -33,4 +33,13 @@
 .gallery-cta{text-align:center;margin-top:72px;padding:58px 24px;background:#fff;border:1px solid var(--line)}
 .gallery-cta h2{font-family:Oswald,sans-serif;text-transform:uppercase;font-size:clamp(32px,5vw,56px);margin:12px 0 28px}
 nav a[aria-current="page"]{border-bottom:2px solid var(--brand);padding-bottom:5px}
+
+/* Completed project photo grid */
+.gallery-page .gallery-grid{display:block;columns:3;column-gap:18px}
+.gallery-page .gallery-item{display:inline-block;width:100%;margin:0 0 18px;break-inside:avoid;background:#e5e6e7;border:1px solid var(--line);box-shadow:0 8px 22px rgba(32,33,36,.08)}
+.gallery-page .gallery-item a{display:block;overflow:hidden}
+.gallery-page .gallery-item img{display:block;width:100%;height:auto;transition:transform .35s ease,filter .35s ease}
+.gallery-page .gallery-item a:hover img{transform:scale(1.02);filter:contrast(1.03)}
+@media(max-width:900px){.gallery-page .gallery-grid{columns:2}}
+@media(max-width:520px){.gallery-page .gallery-grid{columns:1}.gallery-page .gallery-item{margin-bottom:14px}}
 @media(max-width:780px){.gallery-page-hero{padding:75px 6vw 58px}.gallery-page{padding-top:48px}.gallery-cta{margin-top:48px}}
