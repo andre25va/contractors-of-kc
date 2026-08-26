@@ -43,3 +43,18 @@ nav a[aria-current="page"]{border-bottom:2px solid var(--brand);padding-bottom:5
 @media(max-width:900px){.gallery-page .gallery-grid{columns:2}}
 @media(max-width:520px){.gallery-page .gallery-grid{columns:1}.gallery-page .gallery-item{margin-bottom:14px}}
 @media(max-width:780px){.gallery-page-hero{padding:75px 6vw 58px}.gallery-page{padding-top:48px}.gallery-cta{margin-top:48px}}
+
+/* Full-screen gallery viewer */
+body.lightbox-open{overflow:hidden}
+.lightbox[hidden]{display:none}
+.lightbox{position:fixed;inset:0;z-index:1000;display:grid;grid-template-columns:minmax(56px,1fr) minmax(0,1200px) minmax(56px,1fr);align-items:center;background:rgba(10,10,11,.96);padding:56px 18px 24px}
+.lightbox-content{grid-column:2;margin:0;display:flex;min-width:0;height:calc(100vh - 80px);flex-direction:column;align-items:center;justify-content:center}
+.lightbox-image{display:block;max-width:100%;max-height:calc(100vh - 118px);width:auto;height:auto;object-fit:contain;box-shadow:0 14px 50px rgba(0,0,0,.4)}
+.lightbox-count{min-height:28px;padding-top:12px;color:#fff;font-size:14px;font-weight:700;letter-spacing:.08em}
+.lightbox button{appearance:none;border:0;color:#fff;cursor:pointer;font-family:Arial,sans-serif;transition:background .2s ease,transform .2s ease}
+.lightbox-close{position:absolute;top:14px;right:18px;width:46px;height:46px;border-radius:50%;background:rgba(101,103,107,.85);font-size:34px;line-height:1}
+.lightbox-nav{z-index:1;width:52px;height:68px;border-radius:4px;background:rgba(101,103,107,.85);font-size:52px;line-height:1}
+.lightbox-prev{grid-column:1;justify-self:center}
+.lightbox-next{grid-column:3;justify-self:center}
+.lightbox button:hover,.lightbox button:focus-visible{background:#65676b;transform:scale(1.06);outline:2px solid #fff;outline-offset:3px}
+@media(max-width:700px){.lightbox{display:block;padding:58px 10px 76px}.lightbox-content{height:calc(100vh - 134px)}.lightbox-image{max-height:calc(100vh - 170px)}.lightbox-nav{position:absolute;bottom:14px;width:64px;height:50px;font-size:42px}.lightbox-prev{left:calc(50% - 74px)}.lightbox-next{right:calc(50% - 74px)}.lightbox-close{top:8px;right:10px}}
