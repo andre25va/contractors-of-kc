@@ -27,7 +27,8 @@
       <img class="brand-logo" src="logo.png" alt="Contractors of KC">
       <span class="brand-name">Contractors of KC</span>
     </a>
-    <nav aria-label="Main navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav id="main-navigation" aria-label="Main navigation">
       <a href="index.html#services">Services</a>
       <a href="index.html#why-us">Why Us</a>
       <a href="gallery.html" aria-current="page">Gallery</a>
@@ -253,6 +254,7 @@
     <a class="brand footer-brand" href="index.html" aria-label="Contractors of KC home"><img class="brand-logo" src="logo.png" alt="Contractors of KC"><span class="brand-name">Contractors of KC</span></a>
     <p>Serving Kansas City and the surrounding metro.</p>
     <p><a class="footer-phone" href="tel:+19132830880">913-283-0880</a></p>
+    <p><a class="footer-policy" href="privacy-policy.html">Privacy Policy</a></p>
     <p>© 2026 Contractors of KC</p>
   </footer>
 
@@ -266,6 +268,7 @@
     <button class="lightbox-nav lightbox-next" type="button" aria-label="Next photo">›</button>
   </div>
 
+  <script src="menu.js" defer></script>
   <script>
     (() => {
       const links = [...document.querySelectorAll('.gallery-page .gallery-item a')];
